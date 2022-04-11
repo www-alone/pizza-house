@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
+    <title>Pizza</title>
+</head>
+<body>
+    <header>
+      <div class="header">
+          <div class="header__Logo">
+              <h1 class="header__house"><span class="header__pizza">Pizza</span>  on house</h1>
+            </div>
+            <div class="header__support">
+                <h2 class="header__suph2">+7(988)528-28-82</h2>
+                <p class="header__supp2">Телефон поддержки</p>
+            </div>
+                <button type="button" class="header__button" id="button">
+                    Оплата
+                </button>
+                <div id="modal1" class="modal2">
+                    <div class="modal__content">
+                        <span class="close">&times;</span>
+                        <p class="modal__oplata">Выберите способ оплаты:</p>
+                        <br>
+                        <br>
+                        <div class="oplata">
+                            <div class="oplata1">
+                                <img src="oplata/4108841.png" alt="">
+                                <input type="radio" id="check1" name="check" value="1">
+                            </div>
+                            <div class="oplata2">
+                                <img src="oplata/3081015.png" alt="">
+                                <input type="radio" id="check1" name="check" value="2">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="oplata__foot">
+                            <p class="oplata__number">Введите номер телефона:</p>
+                        <div class="oplata__input">
+                            <input type="number" class="oplata__inp">
+                        </div>
+                        <div class="oplata__button">
+                            <button type="button" class="oplata__btn" onclick="zakaz()">Заказать</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+      </div>
+    </header>
+    <nav>
+        <div class="nav__a">
+            <div class="nav__a1">
+                <a href="#pizza">Пицца</a>
+            </div>
+            <div class="nav__a2">
+                <a href="#combo">Комбо</a>
+            </div>
+            <div class="nav__a3">
+                <a href="#karta">Карта</a>
+            </div>
+            <div class="nav__a4">
+                <a href="#svyaz">Связь</a>
+            </div>
+            <div class="nav__a5">
+                <a href="#we">О нас</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="slideshow-container">
+            <div class="slides-img fade">
+                <img src="slider/appetitnaya_picca.jpg" style="width:100%" alt="">
+            </div>
+            <div class="slides-img fade">
+                <img src="slider/129167-poroda-restoran-nezdorovaya_pishha-blyudo-postavka-1920x1080.jpg" style="width:100%" alt="">
+            </div>
+            <div class="slides-img fade">
+
+                <img src="slider/unnamed (2).jpg" style="width:100%" alt="">
+            </div>
+            <a class="prev" onclick="nextSlides(-1)">&#10094</a>
+            <a class="next" onclick="nextSlides(1)">&#10095</a>
+        </div>
+        <div class="main__menu">
+            <h1 style="margin-right: 20px;">MENU</h1>
+        </div>
+        <div class="osnova">
+            <h3 class="zaglav__pizza" id="pizza">Пицца</h3>
+            <div class="menu__1">
+                <div class="menu__1b1">
+                    <img src="photo/334-825.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align: center;">Пепперони</h3>
+                        <p style="text-align:center;">пепперони, сыр Моцарелла,<br> соус Томатный</p>
+                        <br>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">325₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__1b2">
+                    <img src="photo/34-982.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align: center;">Маргарита</h3>
+                        <p style="text-align:center;">помидоры, орегано, сыр <br> Моцарелла, соус Томатный, соус <br> "Маджорио"</p>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">545₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__1b3">
+                    <img src="photo/410-0.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align: center;">Цэпленок Блючиз</h3>
+                        <p style="text-align:center;">куриное филе, сыр Дор Блю, сыр <br> Моцарелла</p>
+                        <br>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">655₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__2">
+                <div class="menu__2b1">
+                    <img src="photo/36-984.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align:center;">Капричоза</h3>
+                        <p style="text-align:center;">ветчина, шампиньоны,<br> маринованные огурцы, маслины,<br>сыр Моцарелла, соус Томатный,<br> соус "Маджорио", орегано</p>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">545₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__2b2">
+                    <img src="photo/41-1024.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align: center;">Ассорти</h3>
+                        <p style="text-align:center;">сервелат, шампиньоны, <br> помидоры, сыр Моцарелла, соус <br> Томатный, соус "Маджорио", укроп</p>
+                        <br>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">655₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__2b3">
+                    <img src="photo/197-977.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align: center;">Барбекю с халапеньо</h3>
+                        <p style="text-align:center;">ветчина, бекон, свинина, сыр <br> Моцарелла, халапеньо, соус <br> «Барбекю»</p>
+                        <br>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">655₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__3">
+                <div class="menu__3b1">
+                    <img src="photo/338-1070.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align:center;">Пепперони супер-томато</h3>
+                        <p style="text-align:center;">сыр Моцарелла, пепперони, соус <br> Томатный, помидоры</p>
+                        <br>
+                        <br>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">495₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__3b2">
+                    <img src="photo/279-990.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align: center;">Мясной пир</h3>
+                        <p style="text-align:center;">пепперони, сыр Моцарелла, соус <br> Томатный, ветчина, маслины, <br> сервелат, бекон</p>
+                        <br>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">655₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__3b3">
+                    <img src="photo/344-1078.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align: center;">Дижонская</h3>
+                        <p style="text-align:center;">ветчина, сыр Моцарелла, <br> маринованные огурцы, соус <br> Томатный, сервелат, Горчичный <br> соус, лук жареный</p>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">545₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="zaglav__kombo" id="combo">Комбо</h3>
+            <div class="kombo__1s">
+                <div class="kombo__1s1">
+                    <img src="photo/351-969.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align:center;">Молодёжное комбо</h3>
+                        <p style="text-align:center;">Комбо из трех пицц по суперцене, <br> Маргарита 30см, Ассорти 30см, <br> Пепперони 30см (на тонком тесте)</p>
+                        <br>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">1195₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kombo__1s2">
+                    <img src="photo/252-970.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align: center;">Для компании</h3>
+                        <p style="text-align:center;">Сет для веселой компании из трех <br> пицц: Венеция 40 см, Капричозо <br> 40 см и Альтоно 40 см <br> (традиционное тетсто)</p>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">1955₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kombo__1s3">
+                    <img src="photo/254-974.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align: center;">Хватит на всех</h3>
+                        <p style="text-align:center;">Большой сет из пяти пицц 40 см <br> на традиционном тесте Острая с <br> беконом, Капричоза, Пепперони, <br> Ассорти и Четыре Сыра.</p>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">3295₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kombo__2s">
+                <div class="kombo__2s1">
+                    <img src="photo/250-947.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align:center;">Для семьи</h3>
+                        <p style="text-align:center;">Пепперони и Венеция 30 см на <br> тонком тесте и классическая <br> бутылочка Pepsi 1л.</p>
+                        <br>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">995₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kombo__2s2">
+                    <img src="photo/6909427-seamless-pattern-of-pizza-slices.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align: center;">Выгодная пара</h3>
+                        <p style="text-align:center;">Пицца Ассорти и Капричоза 30см <br> тонкое тесто</p>
+                        <br>
+                        <br>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">955₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kombo__2s3">
+                    <img src="photo/440-0.jpg" width="300px" height="300px">
+                    <div class="menu__nameprice">
+                        <h3 style="text-align: center;">Комбо с Lay's</h3>
+                        <p style="text-align:center;">Пицца Пепперони с Lay's 40см <br> традиционное тесто, пицца <br> Маргарита 30см на тонком тесте и <br> Пепси 1л</p>
+                        <div class="price__value">
+                        <h4 style="margin-left: 50px; font-size: 20px;">1225₽</h4>
+                        <div class="counter">
+                            <button class="counter__btn" data-direction="minus">
+                                -
+                            </button>
+                            <input type="text" value="0" class="counter__value">
+                            <button class="counter__btn" data-direction="plus">
+                                +
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="zaglav__karta" id="karta">Карта пиццерии</h3>
+            <div id="map"></div>
+            <h3 class="zaglav__svyaz" id="svyaz">Связь с нами</h3>
+            <div class="feedback">
+                <form name ="mess">
+                <div class="feedback__input">
+                    <input name="nmsp" type="text" class="input" placeholder="ФИО">
+                </div>
+                <br>
+                <div class="feedback__input">
+                    <input name="m_to" type="text" class="input" placeholder="Почта">
+                </div>
+                <br>
+                <div class="feedback__input">
+                    <input name="tel" type="number" class="input1" placeholder="Телефон">
+                </div>
+                <br>
+                <textarea placeholder="Введите комментарий" class="textarea"></textarea>
+                <br>
+                <button onclick="mes_go()" class="footer__right__button">Отправить</button>
+                </form>
+            </div>
+            <h3 class="zaglav__we" id="we">О нас</h3>
+            <div class="we__text">
+                <p>Мы быстро развивающаяся онлайн пиццерия,<br> которая хочет порадовать вас <br>вкусной Итальянской пиццой с Американским акцентом!</p>
+            </div>
+            <h3 class="zaglav__canvas">Колличество заказов</h3>
+            <div class="canvas">
+                <canvas width="500" height="400" id="canvas"></canvas>
+            </div>
+            <div class="mounth">
+                <h4 style="color: #FFA07A;">Август</h4>
+                <h4 style="color: #FF7F50;">Сентябрь</h4>
+                <h4 style="color: #FF6347;">Октябрь</h4>
+                <h4 style="color: #F4A460;">Ноябрь</h4>
+                <h4 style="color: #D2691E;">Декабрь</h4>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__kontakt">
+                <div class="footer__kon">
+                    <p style="font-size: 30px;">Контакты</p>
+                    <br>
+                    <p>n.m.dyachenko@gmail.ru</p>
+                    <p>8(988)588-08-08</p>
+                </div>
+                <div class="footer__mob">
+                    <div class="footer__mob2">
+                        <h2 class="footer__h2">+7(800)555-35-55</h2>
+                        <p class="footer__p">Телефон доставки</p>
+                    </div>       
+                </div>
+                <div class="footer_soc">
+                    <p style="font-size: 30px; font-family: 'Montserrat', sans-serif;">Социальные сети</p>
+                    <a class="png" href="https://vk.com/chainschains"><img style="width: 130px; height: 130px;" src="png/kisspng-vkontakte-computer-icons-vk-5b2428a36fc4a5.6766380115290963554578.png"></a>
+                    <a class="png" href="https://www.instagram.com/wwwinsanity/?hl=ru"> <img style="width: 150px; height: 150px;" src="png/kisspng-scalable-vector-graphics-clip-art-instagram-png-file-5a75716ab5b203.3937501115176461867442.png"></a>
+                </div>   
+            </div>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top"></a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="java.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNKBHrvjBO09t1spLFPEsrK8-9YX5KQqA&callback=initMap&v=weekly"async></script>
+</body>
+</html>
