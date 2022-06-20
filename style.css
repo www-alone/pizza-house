@@ -44,7 +44,9 @@
 }
 .header__button{
     text-decoration: none;
-    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
     width: 140px;
     height: 45px;
     line-height: 45px;
